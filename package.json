@@ -22,5 +22,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/radpet/gulp-es6-anno-del-sonar/issues"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "through2": "^2.0.0"
   }
 }
