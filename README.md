@@ -1,0 +1,1 @@
+Gulp plugin that removes all annotations aka "es7.decorators".

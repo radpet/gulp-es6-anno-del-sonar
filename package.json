@@ -1,0 +1,26 @@
+{
+  "name": "gulp-es6-anno-del-sonar",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radpet/gulp-es6-anno-del-sonar.git"
+  },
+  "keywords": [
+    "gulp",
+    "sonar",
+    "es6"
+  ],
+  "author": "Radoslav Petkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radpet/gulp-es6-anno-del-sonar/issues"
+  }
+}
