@@ -13,8 +13,24 @@ var plugin = function (options, sync) {
         }
 
         var str = file.contents.toString();
-        var regExPattern = /@\w(.|\n*)+?\)\n*/g;
-        str = str.replace(regExPattern, '');
+        var regExPatternSingleLine = /@[A-Z][\w]+\(.*\)/g;
+        str = str.replace(regExPatternSingleLine, '');
+
+        var patternMultiLine = /@[A-Z][\w]+\((\s|\S)*?\)/g;
+        var multilineMatches = str.match(patternMultiLine);
+        for(var i in multilineMatches){
+            str = str.replace(multilineMatches[i],function(){
+                var result ="";
+                for(var k=0;k<multilineMatches[i].match(/\n/g).length;k++){
+                    result+="\n";
+                }
+                return result;
+            });
+        }
+        str = str.replace(patternMultiLine,'');
+
+        var regExPatternSingle = /@[A-Z][\w]+/g;
+        str = str.replace(regExPatternSingle, '');
         file.contents = new Buffer(str);
         this.push(file);
         cb();
